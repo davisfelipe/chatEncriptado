@@ -8,7 +8,6 @@ var Server = /** @class */ (function () {
     }
     Server.prototype.start = function (callback) {
         this.app.listen(this.port, callback);
-        this.app.use(express.static('public'));
     };
     Server.init = function (port) {
         return new Server(port);

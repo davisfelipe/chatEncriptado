@@ -8,7 +8,6 @@ export default class Server{
     }
     start(callback?: Function){
         this.app.listen(this.port,callback)
-        this.app.use(express.static('public'))
     }
     static init(port : number) :Server{
         return new Server(port)
